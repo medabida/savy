@@ -1,5 +1,11 @@
 # savy
-Auto-Save your content when editing in HTML input/textarea/single select/multiple select And restore values after refreshing
+Auto-Save your content when editing an HTML Element And restore values after refreshing.
+
+Supported elements:
+-------------------------
+- input (text/number/checkbox/radio)
+- select (single/multiple)
+- textarea
 
 How to use:
 -------------------------
@@ -48,7 +54,9 @@ How to use:
 
 TODO:
 -------------------------
-* Support for checkbox and radiobutton
+* ~~Support for single and multiple select~~
+* ~~Support for checkbox and radiobutton~~
+* ~~callback when savy data is loaded/destroyed~~
 * add retention period for a value
 * destroy a single value (currently: destroy will delete all savy's data)
 * reset user input when savy is destroyed (currently: inputs will still contain their values)
