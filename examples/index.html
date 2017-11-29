@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+
+
+
+
+<div class="">
+  First name:<br>
+  <input type="text" id="xgh" name="firstname" class="auto-save"><br>
+
+
+  Description:<br>
+  <textarea name="name" id="uzt" rows="8" cols="80" class="auto-save"></textarea><br>
+
+
+  Preferred car manufacturer :<br>
+    <select id="dfj" class="auto-save">
+      <option value="none" selected>--</option>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="mercedes">Mercedes</option>
+      <option value="audi">Audi</option>
+    </select>
+<br>
+
+    Preferred car manufacturer (Multiple) :<br>
+      <select id="dfjm" class="auto-save" multiple>
+        <option value="none" selected>--</option>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+
+
+
+
+
+</div>
+
+
+
+<br><br><br><br>
+<button type="button" name="button" onclick="dstry()">Destroy all data</button>
+
+</body>
+</html>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../savy.js"></script>
+<script type="text/javascript">
+
+$('.auto-save').savy('load');
+
+function dstry(){
+  $('.auto-save').savy('destroy');
+  window.location.reload()
+}
+</script>

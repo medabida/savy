@@ -2,12 +2,32 @@
   $.fn.savy = function(order) {
     if (order == "load") {
       $(this).each(function() {
-        if(localStorage.getItem("savy-"+this.id)){
-          this.value = localStorage.getItem("savy-"+this.id);
+
+        if($(this).is("input") || $(this).is("textarea")) {
+          if(localStorage.getItem("savy-"+this.id)){
+            this.value = localStorage.getItem("savy-"+this.id);
+          }
+          $(this).keyup(function() {
+            localStorage.setItem("savy-"+this.id, this.value);
+          });
         }
-        $(this).keyup(function() {
-          localStorage.setItem("savy-"+this.id, this.value);
-        });
+        if($(this).is("select")) {
+          if ($(this).is("[multiple]")) {
+            if(localStorage.getItem("savy-"+this.id)){
+              $(this).val(localStorage.getItem("savy-"+this.id).split(","));
+            }
+            $(this).change(function() {
+              localStorage.setItem("savy-"+this.id, $(this).val());
+            });
+          }else{
+            if(localStorage.getItem("savy-"+this.id)){
+              $(this).val(localStorage.getItem("savy-"+this.id));
+            }
+            $(this).change(function() {
+              localStorage.setItem("savy-"+this.id, $(this).val());
+            });
+          }
+        }
       });
     }else if (order == "destroy") {
       $(this).each(function() {
