@@ -27,12 +27,22 @@ How to use:
 
 	```
    $('.auto-save').savy('load');
+   
+   // you can pass a function to be called when savy is finished loading.
+   $('.auto-save').savy('load',function(){
+     console.log("All data from savy are loaded");
+   });
 	```
 
 4. destroy savy()
 
 	```
    $('.auto-save').savy('destroy');
+   
+   // you can pass a function to be called when savy is destroyed.
+   $('.auto-save').savy('destroy',function(){
+     console.log("All data from savy are destroyed");
+   });
 	```
 
 
@@ -40,6 +50,7 @@ TODO:
 -------------------------
 * add retention period for a value
 * destroy a single value (currently: destroy will delete all savy's data)
+* reset user input when savy is destroyed (currently: inputs will still contain their values)
 
 
 Compatibility:
