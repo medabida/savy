@@ -1,5 +1,5 @@
-# savy
-savy.js is an ultra-light jQuery plugin that automatically saves form values in the client side (using HTML5 localStorage) and restore them on your next visit. A great solution to preventing data loss in case the browser is refreshed or the page is suddenly closed.
+# Savy
+an ultra-light jQuery plugin that automatically saves form values in the client side (using HTML5 localStorage) and restore them on your next visit. A great solution to prevent data loss in case the browser is refreshed or the page is suddenly closed.
 
 Supported elements:
 -------------------------
@@ -10,7 +10,7 @@ Supported elements:
 How to use:
 -------------------------
 
-1. Include jquery and savy JS files
+1. Include jquery and Savy JS files
 
 	```
 	<script src="jquery.js"></script>
@@ -29,7 +29,7 @@ How to use:
     </form>
 	```
 
-3. initialize savy()
+3. initialize Savy
 
 	```
    $('.auto-save').savy('load');
@@ -40,7 +40,7 @@ How to use:
    });
 	```
 
-4. destroy savy()
+4. destroy Savy
 
 	```
    $('.auto-save').savy('destroy');
@@ -58,8 +58,8 @@ TODO:
 * ~~Support for checkbox and radiobutton~~
 * ~~callback when savy data is loaded/destroyed~~
 * add retention period for a value
-* destroy a single value (currently: destroy will delete all savy's data)
-* reset user input when savy is destroyed (currently: inputs will still contain their values)
+* destroy a single value (currently: destroy will delete all Savy's data)
+* reset user input when Savy is destroyed (currently: inputs will still contain their values)
 
 
 Compatibility:
