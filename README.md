@@ -1,5 +1,5 @@
 # savy
-Auto-Save your content when editing an HTML Element And restore values after refreshing.
+savy.js is an ultra-light jQuery plugin that automatically saves form values in the client side (using HTML5 localStorage) and restore them on your next visit. A great solution to preventing data loss in case the browser is refreshed or the page is suddenly closed.
 
 Supported elements:
 -------------------------
