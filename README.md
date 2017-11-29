@@ -48,6 +48,7 @@ How to use:
 
 TODO:
 -------------------------
+* Support for checkbox and radiobutton
 * add retention period for a value
 * destroy a single value (currently: destroy will delete all savy's data)
 * reset user input when savy is destroyed (currently: inputs will still contain their values)
