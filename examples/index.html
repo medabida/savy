@@ -55,10 +55,16 @@
 <script type="text/javascript" src="../savy.js"></script>
 <script type="text/javascript">
 
-$('.auto-save').savy('load');
+//$('.auto-save').savy('load') --> can be used without callback
+$('.auto-save').savy('load',function(){
+  console.log("All data from savy are loaded");
+});
 
 function dstry(){
-  $('.auto-save').savy('destroy');
-  window.location.reload()
+  //$('.auto-save').savy('destroy') --> can be used without callback
+  $('.auto-save').savy('destroy',function(){
+    console.log("All data from savy are Destroyed");
+    window.location.reload();
+  });
 }
 </script>
