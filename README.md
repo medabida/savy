@@ -1,5 +1,5 @@
 # savy
-Auto-Save your content when editing in HTML input/textarea And restore values after refreshing
+Auto-Save your content when editing in HTML input/textarea/single select/multiple select And restore values after refreshing
 
 How to use:
 -------------------------
@@ -20,7 +20,7 @@ How to use:
       <br>
       Last name:<br>
       <input id="lname" type="text" class="auto-save" name="lastname" value="Mouse">
-    </form> 
+    </form>
 	```
 
 3. initialize savy()
@@ -28,7 +28,7 @@ How to use:
 	```
    $('.auto-save').savy('load');
 	```
-  
+
 4. destroy savy()
 
 	```
@@ -36,7 +36,17 @@ How to use:
 	```
 
 
+TODO:
+-------------------------
+* callback when savy data is loaded
+* add retention period for a value
+
 Compatibility:
 -------------------------
 
 * IE8 and above, Firefox, Chrome, Safari and Opera
+
+
+License:
+-------------------------
+Released under the MIT license
