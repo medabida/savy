@@ -38,8 +38,9 @@ How to use:
 
 TODO:
 -------------------------
-* callback when savy data is loaded
 * add retention period for a value
+* destroy a single value (currently: destroy will delete all savy's data)
+
 
 Compatibility:
 -------------------------
