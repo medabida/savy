@@ -2,7 +2,29 @@
   $.fn.savy = function(order,fn) {
     if (order == "load") {
       $(this).each(function() {
-        if($(this).is("input") || $(this).is("textarea")) {
+
+        if ($(this).is(":radio")) {
+          if(localStorage.getItem("savy-"+$(this).attr("name"))){
+            if (localStorage.getItem("savy-"+$(this).attr("name")) == this.id) {
+              this.checked = true;
+            }else{
+              this.checked = false
+            }
+          }
+          $(this).change(function() {
+            localStorage.setItem("savy-"+$(this).attr("name"), this.id);
+          });
+
+        }
+        else if($(this).is(":checkbox")){
+          if(localStorage.getItem("savy-"+this.id)){
+            this.checked = (localStorage.getItem("savy-"+this.id) == "1" ? true : false);
+          }
+          $(this).change(function() {
+            localStorage.setItem("savy-"+this.id, (this.checked ? "1" : "0"));
+          });
+        }
+        else if($(this).is("input") || $(this).is("textarea")) {
           if(localStorage.getItem("savy-"+this.id)){
             this.value = localStorage.getItem("savy-"+this.id);
           }
@@ -10,7 +32,7 @@
             localStorage.setItem("savy-"+this.id, this.value);
           });
         }
-        if($(this).is("select")) {
+        else if($(this).is("select")) {
           if ($(this).is("[multiple]")) {
             if(localStorage.getItem("savy-"+this.id)){
               $(this).val(localStorage.getItem("savy-"+this.id).split(","));
