@@ -57,6 +57,7 @@ TODO:
 * ~~Support for single and multiple select~~
 * ~~Support for checkbox and radiobutton~~
 * ~~callback when savy data is loaded/destroyed~~
+* ~~add support for saving auto-selected value(s) in single and multiple select~~
 * add retention period for a value
 * destroy a single value (currently: destroy will delete all Savy's data)
 * reset user input when Savy is destroyed (currently: inputs will still contain their values)
