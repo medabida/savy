@@ -32,6 +32,8 @@
           if ($(this).is("[multiple]")) {
             if(localStorage.getItem(sv+this.id)){
               $(this).val(localStorage.getItem(sv+this.id).split(","));
+            }else{
+              localStorage.setItem(sv+this.id, $(this).val());
             }
             $(this).change(function() {
               localStorage.setItem(sv+this.id, $(this).val());
@@ -39,11 +41,14 @@
           }else{
             if(localStorage.getItem(sv+this.id)){
               $(this).val(localStorage.getItem("savy-"+this.id));
+            }else{
+              localStorage.setItem(sv+this.id, $(this).val());
             }
             $(this).change(function() {
               localStorage.setItem(sv+this.id, $(this).val());
             });
           }
+
         }
       });
       if ($.isFunction(fn)){fn();}
