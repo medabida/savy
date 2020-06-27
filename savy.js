@@ -25,9 +25,13 @@
           if(localStorage.getItem(sv+this.id)){
             this.value = localStorage.getItem(sv+this.id);
           }
-          $(this).keyup(function() {
-            localStorage.setItem(sv+this.id, this.value);
-          });
+          $(this).on( 'focus', function(){
+            var intervalDuration = 500,
+                interval = setInterval( () => {
+                  localStorage.setItem(sv+this.id, this.value);
+                  if(!$(this).is(":focus")) clearInterval(interval);  
+                }, intervalDuration );
+          } );
         }else if($(this).is("select")) {
           if ($(this).is("[multiple]")) {
             if(localStorage.getItem(sv+this.id)){
@@ -48,7 +52,6 @@
               localStorage.setItem(sv+this.id, $(this).val());
             });
           }
-
         }
       });
       if ($.isFunction(fn)){fn();}
